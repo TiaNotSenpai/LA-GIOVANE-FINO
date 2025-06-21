@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istruzione Politica - La Giovane Fino</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">La Giovane Fino</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chisiamo.html">Chi Siamo</a></li>
+                <li><a href="istruzione.html" class="active">Istruzione Politica</a></li>
+                <li><a href="news.html">News Locali</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Apri menu">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+    </header>
+
+    <main>
+        <section class="hero-section">
+			<div class="hero-content">
+				<h1>Crescere, insieme.</h1>
+				<p>Approfondimenti, analisi e strumenti per capire il presente e immaginare il futuro.</p>
+			</div>
+			
+			<div class="animated-bg">
+				<div class="shape shape-1"></div>
+				<div class="shape shape-2"></div>
+				<div class="shape shape-3"></div>
+				<div class="shape shape-4"></div>
+			</div>
+        </section>
+
+        <div class="content-wrapper">
+            <div class="container">
+                <!-- Griglia degli articoli: riempi queste card o copiale per aggiungerne altre -->
+                <div class="article-grid">
+
+                    <!-- Articolo 1 - Antifascismo -->
+                    <article class="article-card animate-on-scroll">
+                        <img src="images/articolo-antifa.jpg" alt="Immagine segnaposto per l'articolo">
+                        <div class="article-card-content">
+                            <h3>Cos'è l'Antifascismo oggi?</h3>
+                            <p>Un'analisi dei valori fondamentali e della loro rilevanza nella società contemporanea. Sostituisci questo testo con una breve anteprima.</p>
+                            <a href="#" class="btn btn-secondary">Leggi di più</a>
+                        </div>
+                    </article>
+
+                    <!-- Articolo 2 - Marx -->
+                    <article class="article-card animate-on-scroll">
+                        <img src="images/articolo-marx.png" alt="Immagine segnaposto per l'articolo">
+                        <div class="article-card-content">
+                            <h3>Un po' di letteratura: Karl Marx</h3>
+                            <p>I fondamenti della realtà materiale ed economica del mondo in cui viviamo. Da leggere assolutamente per comprendere il mondo!</p>
+                            <a href="istruzione/manifesto-marx.html" class="btn btn-secondary">Inizia a leggere!</a>
+                        </div>
+                    </article>
+
+                    <!-- Articolo 3 - Orientamento Politico -->
+                    <article class="article-card animate-on-scroll">
+                        <img src="images/articolo-neolib.jpeg" alt="Immagine segnaposto per l'articolo">
+                        <div class="article-card-content">
+                            <h3>Glossario Minimo di Politica</h3>
+                            <p>Destra, Sinistra, Neoliberismo. Spieghiamo in modo semplice alcuni termini che senti tutti i giorni.</p>
+                            <a href="#" class="btn btn-secondary">Consulta il glossario</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 La Giovane Fino. Collettivo apartitico e antifascista.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/la.giovane.fino/">Instagram</a>
+            <a href="#">Telegram</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
