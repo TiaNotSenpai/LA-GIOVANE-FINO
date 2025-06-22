@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src",
       output: "_site",
-      includes: "../_includes" // Le diciamo dove trovare i layout
+      includes: "_includes" // Le diciamo dove trovare i layout
     }
   };
 };
