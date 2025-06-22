@@ -4,14 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>Amministrazione Contenuti - La Giovane Fino</title>
-  
-  <!-- Script di Decap CMS -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  
-  <!-- QUESTA È LA RIGA FONDAMENTALE. Dice alla pagina di usare il servizio di Login di Netlify.-->
+  <title>Amministrazione Contenuti</title>
+  <!-- Questo script gestirà il widget di login -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <!-- Questo script carica l'applicazione del CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!--
+    NOTA: Il file di configurazione ora viene caricato esplicitamente qui.
+  -->
+  <script>
+    window.CMS_CONFIG = {
+      backend: {
+        name: 'git-gateway',
+        branch: 'main', // Assicurati che 'main' sia il nome del tuo branch principale
+      },
+      media_folder: 'src/images/uploads',
+      public_folder: '/images/uploads',
+      collections: [
+        {
+          name: 'articoli',
+          label: 'Articoli',
+          folder: 'src/articoli',
+          create: true,
+          slug: '{{slug}}', // Usiamo solo lo slug per il nome del file
+          fields: [
+            { label: 'Titolo', name: 'title', widget: 'string' },
+            { label: 'Data', name: 'date', widget: 'datetime' },
+            { label: 'Immagine Copertina', name: 'image', widget: 'image', optional: true },
+            { label: 'Corpo', name: 'body', widget: 'markdown' },
+          ],
+        },
+      ],
+    };
+
+    CMS.init({ config: window.CMS_CONFIG });
+  </script>
 </body>
 </html>
