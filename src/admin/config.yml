@@ -1,23 +1,28 @@
-# Imposta Netlify come backend per l'autenticazione
+# Questa configurazione usa il "custom backend" per Auth0.
+# Non devi più usare "git-gateway" o "github".
 backend:
-  name: git-gateway
-  branch: main # O la tua branch principale
+  name: auth0
+  domain: tia.eu.auth0.com
+  client_id: 4UfU7S8f9h04oXtv6PqrhuJe6X02sXQH
+  # NOTA: Per sicurezza, Auth0 userà GitHub per salvare i file. 
+  # Il CMS ti chiederà di collegare il tuo account GitHub una sola volta.
+  repo: TiaNotSenpai/LA-GIOVANE-FINO  # Sostituisci con i tuoi dati
 
-# Localizzazione (opzionale, ma utile)
+# Localizzazione dell'interfaccia in italiano
 locale: 'it'
 
-# Percorso per il salvataggio dei file media
+# Percorsi per il salvataggio dei file media
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
 
-# Struttura dei tuoi contenuti
+# Collezione degli Articoli
 collections:
-  - name: "articoli" # Identificativo tecnico
-    label: "Articoli" # Come appare nel menu del CMS
-    folder: "src/articoli" # Dove vengono salvati i nuovi file
+  - name: "articoli"
+    label: "Articoli di Approfondimento"
+    folder: "src/articoli"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # I campi del modulo di inserimento
+    slug: "{{slug}}"
+    fields:
       - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Immagine", name: "image", widget: "image", optional: true }

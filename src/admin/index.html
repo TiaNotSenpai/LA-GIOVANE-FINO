@@ -1,29 +1,12 @@
-# Questa configurazione usa il "custom backend" per Auth0.
-# Non devi più usare "git-gateway" o "github".
-backend:
-  name: auth0
-  domain: tia.eu.auth0.com
-  client_id: 4UfU7S8f9h04oXtv6PqrhuJe6X02sXQH
-  # NOTA: Per sicurezza, Auth0 userà GitHub per salvare i file. 
-  # Il CMS ti chiederà di collegare il tuo account GitHub una sola volta.
-  repo: TiaNotSenpai/LA-GIOVANE-FINO  # Sostituisci con i tuoi dati
-
-# Localizzazione dell'interfaccia in italiano
-locale: 'it'
-
-# Percorsi per il salvataggio dei file media
-media_folder: "src/images/uploads"
-public_folder: "/images/uploads"
-
-# Collezione degli Articoli
-collections:
-  - name: "articoli"
-    label: "Articoli di Approfondimento"
-    folder: "src/articoli"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Immagine", name: "image", widget: "image", optional: true }
-      - { label: "Testo dell'Articolo", name: "body", widget: "markdown" }
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Amministrazione Contenuti</title>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+</body>
+</html>
