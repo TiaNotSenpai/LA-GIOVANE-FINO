@@ -1,7 +1,8 @@
----
-layout: base
-title: Chi Siamo
----
+{% extends "layouts/base.html" %}
+
+{% block content %}
+{% set title = "Chi Siamo?" %}
+
         <section class="hero-section">
 			<div class="hero-content">
 				<h1>Un collettivo. Uno spazio. Un'alternativa.</h1>
@@ -41,3 +42,4 @@ title: Chi Siamo
                 </section>
             </div>
         </div>
+{% endblock %}

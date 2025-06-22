@@ -1,7 +1,7 @@
----
-layout: base
-title: Homepage
----
+{% extends "layouts/base.html" %}
+
+{% block content %}
+{% set title = "Home" %}
 
 <!-- Sezione Hero: il primo impatto -->
 <section class="hero-section">
@@ -44,3 +44,4 @@ title: Homepage
                 </div>
             </div>
         </section>
+{% endblock %}

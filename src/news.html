@@ -1,7 +1,7 @@
----
-layout: base
-title: News Locali
----
+{% extends "layouts/base.html" %}
+
+{% block content %}
+{% set title = "News Locali" %}
 
         <section class="hero-section">
 			<div class="hero-content">
@@ -49,3 +49,4 @@ title: News Locali
                 </div>
             </div>
         </div>
+{% endblock %}

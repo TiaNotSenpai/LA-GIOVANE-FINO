@@ -36,15 +36,9 @@
         </button>
     </header>
 
-    <main>
-        <!-- 
-            QUESTA È LA MAGIA DI ELEVENTY:
-            Il contenuto specifico di ogni pagina (index.html, chisiamo.html, etc.)
-            verrà inserito automaticamente qui.
-        -->
-        {{ content | safe }}
-    </main>
-
+		<main>
+			{% block content %}{% endblock %}
+		</main>
     <footer class="main-footer">
         <p>© 2025 La Giovane Fino. Collettivo apartitico e antifascista.</p>
         <div class="social-links">
