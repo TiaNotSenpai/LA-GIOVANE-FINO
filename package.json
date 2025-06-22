@@ -1,23 +1,16 @@
 {
-  "name": "la-giovane-fino",
+  "name": "la-giovane-fino-website",
   "version": "1.0.0",
+  "description": "Sito web per La Giovane Fino",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TiaNotSenpai/LA-GIOVANE-FINO.git"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TiaNotSenpai/LA-GIOVANE-FINO/issues"
-  },
-  "homepage": "https://github.com/TiaNotSenpai/LA-GIOVANE-FINO#readme",
-  "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.1"
+    "@11ty/eleventy": "^2.0.1"
   }
 }

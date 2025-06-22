@@ -1,7 +1,7 @@
 [build]
-  command = "npx @11ty/eleventy"
+  command = "npm install && npm run build"
   publish = "_site"
 
 [dev]
-  command = "npx @11ty/eleventy --serve"
+  command = "npm run start"
   targetPort = 8888
