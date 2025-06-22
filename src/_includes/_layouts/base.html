@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Il titolo e la descrizione saranno dinamici per ogni pagina -->
     <title>{{ title }} - La Giovane Fino</title>
-    <meta name="description" content="{{ description or 'La Giovane Fino: un progetto politico, culturale e comunitario per restituire voce ai giovani di Fino Mornasco.' }}">
-    
-    <!-- Google Fonts (lo mettiamo qui, una sola volta per tutto il sito) -->
+    <meta name="description" content="{{ description or 'Progetto politico, culturale e comunitario.' }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Percorsi corretti a CSS e JS (usiamo / all'inizio per il percorso assoluto) -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
     <header class="main-header">
         <a href="/" class="logo">La Giovane Fino</a>
         <nav class="main-nav">
             <ul>
-                <!-- Useremo un piccolo trucco per la classe 'active' in futuro -->
                 <li><a href="/">Home</a></li>
                 <li><a href="/chisiamo.html">Chi Siamo</a></li>
                 <li><a href="/istruzione.html">Istruzione Politica</a></li>
@@ -30,15 +22,12 @@
             </ul>
         </nav>
         <button id="menu-toggle" class="menu-toggle" aria-label="Apri menu">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
+            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
         </button>
     </header>
-
-		<main>
-			{% block content %}{% endblock %}
-		</main>
+    <main>
+        {{ content | safe }}
+    </main>
     <footer class="main-footer">
         <p>© 2025 La Giovane Fino. Collettivo apartitico e antifascista.</p>
         <div class="social-links">
@@ -46,7 +35,6 @@
             <a href="#">Telegram</a>
         </div>
     </footer>
-
     <script src="/js/script.js"></script>
 </body>
 </html>

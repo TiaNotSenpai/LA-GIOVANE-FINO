@@ -1,7 +1,3 @@
 [build]
   command = "npm install && npm run build"
   publish = "_site"
-
-[dev]
-  command = "npm run start"
-  targetPort = 8888
