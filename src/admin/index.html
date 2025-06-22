@@ -1,36 +1,29 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Amministrazione Contenuti - La Giovane Fino</title>
+# Questa configurazione usa il "custom backend" per Auth0.
+# Non devi più usare "git-gateway" o "github".
+backend:
+  name: auth0
+  domain: tia.eu.auth0.com
+  client_id: 4UfU7S8f9h04oXtv6PqrhuJe6X02sXQH
+  # NOTA: Per sicurezza, Auth0 userà GitHub per salvare i file. 
+  # Il CMS ti chiederà di collegare il tuo account GitHub una sola volta.
+  repo: TiaNotSenpai/LA-GIOVANE-FINO  # Sostituisci con i tuoi dati
 
-  <!-- Script del Widget di Login di Netlify -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+# Localizzazione dell'interfaccia in italiano
+locale: 'it'
 
-  <!-- Script del CMS Decap -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</head>
-<body>
-  <!-- 
-    Questo script è LA SOLUZIONE.
-    Ascolta gli eventi del widget di login e gestisce il flusso.
-    1. Attende che Netlify Identity sia pronto (`init`).
-    2. Se l'utente non è loggato, attende l'evento di login.
-    3. Dopo il login, ricarica la pagina per assicurarsi che Decap CMS 
-       prenda correttamente la sessione autenticata.
-  -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-</body>
-</html>
+# Percorsi per il salvataggio dei file media
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+# Collezione degli Articoli
+collections:
+  - name: "articoli"
+    label: "Articoli di Approfondimento"
+    folder: "src/articoli"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Immagine", name: "image", widget: "image", optional: true }
+      - { label: "Testo dell'Articolo", name: "body", widget: "markdown" }
