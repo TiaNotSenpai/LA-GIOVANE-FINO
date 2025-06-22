@@ -1,25 +1,24 @@
-# Backend: dice al CMS di usare il Git Gateway di Netlify per autenticarsi e salvare su GitHub.
+# Imposta Netlify come backend per l'autenticazione
 backend:
   name: git-gateway
-  branch: main # Assicurati che 'main' sia il nome del tuo branch principale
+  branch: main # O la tua branch principale
 
-# Localizzazione: usiamo l'italiano per l'interfaccia
+# Localizzazione (opzionale, ma utile)
 locale: 'it'
 
-# Media: dove salvare le immagini caricate tramite il CMS.
+# Percorso per il salvataggio dei file media
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
 
-# Collections: qui definiamo i tipi di contenuti che vuoi gestire.
+# Struttura dei tuoi contenuti
 collections:
-  - name: "articoli"
-    label: "Articoli (Istruzione)"
-    folder: "src/articoli" # Salva i file in questa cartella
+  - name: "articoli" # Identificativo tecnico
+    label: "Articoli" # Come appare nel menu del CMS
+    folder: "src/articoli" # Dove vengono salvati i nuovi file
     create: true
-    slug: "{{slug}}" # Il nome del file sarà il titolo "slugificato" (es. titolo-articolo.md)
-    # I campi da compilare per ogni articolo
-    fields:
-      - { label: "Titolo Articolo", name: "title", widget: "string" }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # I campi del modulo di inserimento
+      - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Immagine di Copertina", name: "image", widget: "image", optional: true }
-      - { label: "Contenuto Principale", name: "body", widget: "markdown" }
+      - { label: "Immagine", name: "image", widget: "image", optional: true }
+      - { label: "Testo dell'Articolo", name: "body", widget: "markdown" }

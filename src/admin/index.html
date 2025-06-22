@@ -1,16 +1,36 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>Amministrazione Contenuti</title>
-  
-  <!-- Questo script carica il widget di login di Netlify -->
+  <title>Amministrazione Contenuti - La Giovane Fino</title>
+
+  <!-- Script del Widget di Login di Netlify -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- Questo script carica l'applicazione del CMS -->
+
+  <!-- Script del CMS Decap -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
+  <!-- 
+    Questo script è LA SOLUZIONE.
+    Ascolta gli eventi del widget di login e gestisce il flusso.
+    1. Attende che Netlify Identity sia pronto (`init`).
+    2. Se l'utente non è loggato, attende l'evento di login.
+    3. Dopo il login, ricarica la pagina per assicurarsi che Decap CMS 
+       prenda correttamente la sessione autenticata.
+  -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
