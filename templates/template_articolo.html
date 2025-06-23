@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITOLO}} - La Giovane Fino</title>
+    <!-- Il percorso ../ torna indietro dalla cartella /istruzione a quella principale -->
+    <link rel="stylesheet" href="../style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <a href="../index.html" class="logo">La Giovane Fino</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../chisiamo.html">Chi Siamo</a></li>
+                <li><a href="../istruzione.html" class="active">Istruzione Politica</a></li>
+                <li><a href="../news.html">News Locali</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Apri menu">
+			<span class="hamburger-box"><span class="hamburger-inner"></span></span>
+		</button>
+    </header>
+
+    <main>
+        <!-- L'intestazione verrà popolata dallo script -->
+        <section class="page-header-section">
+			<div class="hero-content">
+				<h1>{{TITOLO}}</h1>
+				<p>{{SOTTOTITOLO}}</p>
+			</div>
+			<!-- Animazione dello sfondo -->
+			<div class="animated-bg">
+				<div class="shape shape-1"></div>
+				<div class="shape shape-2"></div>
+				<div class="shape shape-3"></div>
+				<div class="shape shape-4"></div>
+			</div>
+        </section>
+
+        <div class="content-wrapper">
+            <div class="container article-container"> 
+                <!-- Il corpo del tuo articolo andrà qui -->
+                {{CORPO_HTML}}
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 La Giovane Fino. Collettivo apartitico e antifascista.</p>
+    </footer>
+
+    <script src="../script.js"></script> 
+</body>
+</html>

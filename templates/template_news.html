@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITOLO}} - News Locali</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <a href="../index.html" class="logo">La Giovane Fino</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../chisiamo.html">Chi Siamo</a></li>
+                <li><a href="../istruzione.html">Istruzione Politica</a></li>
+                <li><a href="../news.html" class="active">News Locali</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Apri menu">
+            <!-- ... hamburger ... -->
+		</button>
+    </header>
+    <main>
+        <section class="page-header-section">
+			<div class="hero-content">
+				<h1>{{TITOLO}}</h1>
+				<p>{{SOTTOTITOLO}}</p>
+			</div>
+			<div class="animated-bg">
+                <!-- ... forme animate ... -->
+			</div>
+        </section>
+        <div class="content-wrapper">
+            <div class="container article-container"> 
+                {{CORPO_HTML}}
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer"><!-- ... --></footer>
+    <script src="../script.js"></script> 
+</body>
+</html>

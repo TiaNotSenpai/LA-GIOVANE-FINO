@@ -495,3 +495,59 @@ color: var(--primary-color);
     margin: 0;
     font-size: 0.95rem; /* Un po' più piccolo del testo normale */
 }
+
+/*------------------------------------*\
+  # STILI PER CONTENUTI ARTICOLI/NEWS
+\*------------------------------------*/
+
+.article-container h2, 
+.article-container h3 { /* Sottotitoli dentro l'articolo */
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    color: var(--secondary-color);
+}
+.article-container ul,
+.article-container ol {
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+.article-container li {
+    margin-bottom: 0.5rem;
+}
+.article-container blockquote {
+    font-style: italic;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #ddd;
+}
+
+/* Stile per l'immagine e la didascalia dentro l'articolo */
+.article-image {
+    margin: 2rem 0;
+    width: 100%;
+}
+.article-image img {
+    width: 100%;
+    height: auto; /* Mantiene le proporzioni */
+    border: 2px solid var(--dark-color);
+}
+.article-image figcaption {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #555;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Box di commento (creato con il comando [COMMENTO]) */
+.comment-box {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--highlight-bg);
+    border-left: 5px solid var(--secondary-color);
+}
+.comment-box p {
+    font-style: normal;
+    font-size: 0.95rem;
+    margin: 0;
+}
