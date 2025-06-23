@@ -1,9 +1,0 @@
-# Dipendenze
-/node_modules
-
-# Cartella di output del build
-/_site
-
-# Log e file di sistema
-npm-debug.log*
-.DS_Store
