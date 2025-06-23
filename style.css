@@ -551,3 +551,67 @@ color: var(--primary-color);
     font-size: 0.95rem;
     margin: 0;
 }
+
+/*------------------------------------*\
+  # STILI SPECIFICI PER PAGINA "CHI SIAMO"
+\*------------------------------------*/
+
+/* Stile per l'introduzione, la centra e le dà più aria */
+.manifesto-intro {
+    text-align: center;
+    max-width: 800px; /* Restringe la larghezza del testo per leggibilità */
+}
+.manifesto-intro h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+.manifesto-intro p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+
+/* Stile per la sezione dei valori (la griglia) */
+.values-section {
+    padding: 60px 0;
+    background-color: var(--light-color); /* Leggero stacco di colore */
+}
+.values-grid {
+    display: grid;
+    /* Crea 3 colonne su schermi grandi, 1 su mobile */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem; /* Spazio tra le card */
+    text-align: center;
+}
+.value-card h3 {
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+.value-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+/* Stile per la sezione "Visione", scura e d'impatto */
+.vision-section {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 80px 5%;
+    text-align: center;
+}
+.vision-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.vision-section p {
+    font-size: 1.5rem; /* Testo più grande per dargli enfasi */
+    font-family: var(--font-headings);
+    line-height: 1.4;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.vision-section strong {
+    color: var(--primary-color);
+}
